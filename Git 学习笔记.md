@@ -228,6 +228,17 @@ $ git push --set-upstream origin <一致的branch名称> # 回顾一下，origin
 # 或者
 $ git push -u origin <一致的branch名称> # -u参数是 --set-upstream 的快捷方式
 ```
+
+## 当无法链接远程仓库时
+情景1 可能是因为缓存冲突导致的 执行
+```bash
+$ git remote -v #先检查一下仓库情况 是否是目标仓库
+```
+然后清空认证缓存
+```bash
+$ git credential-cache exit
+```
+
 # 如何在Git bash中查询命令的使用方法
 
 ```bash
@@ -238,4 +249,4 @@ $ git <commandName> -h # 在git bash中快速查看作用
 # 另外 查看所有命令
 $ git help -a 
 ```
-# this is a test
+
